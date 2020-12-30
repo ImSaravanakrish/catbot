@@ -17,7 +17,6 @@ class Config(object):
     # websites, this might prevent the un-authorized use of the
     # confidential session files
     # Get your own APPID from https://api.openweathermap.org/data/2.5/weather
-    OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", None)
     # Send .get_id in any group to fill this value.
     PRIVATE_GROUP_BOT_API_ID = os.environ.get("PRIVATE_GROUP_BOT_API_ID", None)
     if PRIVATE_GROUP_BOT_API_ID:
@@ -29,12 +28,8 @@ class Config(object):
         PRIVATE_CHANNEL_BOT_API_ID = int(PRIVATE_CHANNEL_BOT_API_ID)
         # This is required for the plugins involving the file system.
     TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
-    # This is required for the speech to text module. Get your USERNAME from
-    # https://console.bluemix.net/docs/services/speech-to-text/getting-started.html
-    IBM_WATSON_CRED_URL = os.environ.get("IBM_WATSON_CRED_URL", None)
-    IBM_WATSON_CRED_PASSWORD = os.environ.get("IBM_WATSON_CRED_PASSWORD", None)
     # This is required for the @telegraph functionality.
-    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "Survivor")
+    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "saravanakrish")
     # Set False to stop deleting old welcome messages
     CLEAN_WELCOME = os.environ.get("CLEAN_WELCOME", True)
     # github vars
@@ -49,7 +44,7 @@ class Config(object):
     TG_BOT_USER_NAME_BF_HER = os.environ.get("TG_BOT_USER_NAME_BF_HER", None)
     NO_LOG_P_M_S = bool(os.environ.get("NO_LOG_P_M_S", True))
     THUMB_IMAGE = os.environ.get(
-        "THUMB_IMAGE", "https://telegra.ph/file/2502208a7135c578e8cb3.jpg"
+        "THUMB_IMAGE", "https://telegra.ph/file/2463aae74130f51d88ecf.jpg"
     )
     # Genius lyrics get this value from https://genius.com/developers both has
     # same values
@@ -92,14 +87,14 @@ class Config(object):
     DB_URI = os.environ.get("DATABASE_URL", None)
     # number of rows of buttons to be displayed in .help command
     NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD = int(
-        os.environ.get("NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD", 7)
+        os.environ.get("NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD", 4)
     )
     # number of rows of buttons to be displayed in .helpme command
     NO_OF_COLOUMS_DISPLAYED_IN_H_ME_CMD = int(
         os.environ.get("NO_OF_COLOUMS_DISPLAYED_IN_H_ME_CMD", 3)
     )
     # emoji to be displayed in .help
-    EMOJI_TO_DISPLAY_IN_HELP = os.environ.get("EMOJI_TO_DISPLAY_IN_HELP", " ")
+    EMOJI_TO_DISPLAY_IN_HELP = os.environ.get("EMOJI_TO_DISPLAY_IN_HELP", "⚡️")
     # specify command handler that should be used for the plugins
     # this should be a valid "regex" pattern
     COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", r"\.")
@@ -108,17 +103,7 @@ class Config(object):
     # specify list of users allowed to use bot
     # WARNING: be careful who you grant access to your bot.
     # malicious users could do ".exec rm -rf /*"
-    SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
-    # Google Drive ()
-    CHROME_BIN = os.environ.get("CHROME_BIN", "/app/.apt/usr/bin/google-chrome")
-    CHROME_DRIVER = os.environ.get(
-        "CHROME_DRIVER", "/app/.chromedriver/bin/chromedriver"
-    )
-    G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", None)
-    G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", None)
-    G_DRIVE_FOLDER_ID = os.environ.get("G_DRIVE_FOLDER_ID", None)
-    G_DRIVE_AUTH_TOKEN_DATA = os.environ.get("G_DRIVE_AUTH_TOKEN_DATA", None)
-    G_DRIVE_DATA = os.environ.get("G_DRIVE_DATA", None)
+    SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").
     #  AUTH_TOKEN_DATA = os.environ.get("AUTH_TOKEN_DATA", None)
     # os.makedirs(TMP_DOWNLOAD_DIRECTORY, exist_ok=True)
     # t_file = open(TMP_DOWNLOAD_DIRECTORY+"auth_token.txt","w")
@@ -129,8 +114,6 @@ class Config(object):
     GROUP_REG_SED_EX_BOT_S = os.environ.get(
         "GROUP_REG_SED_EX_BOT_S", r"(regex|moku|BananaButler_|rgx|l4mR)bot"
     )
-    # rapidleech plugins
-    DOWNLOAD_PFP_URL_CLOCK = os.environ.get("DOWNLOAD_PFP_URL_CLOCK", None)
     # Google Chrome Selenium Stuff
     # taken from
     # https://github.com/jaskaranSM/UniBorg/blob/9072e3580cc6c98d46f30e41edbe73ffc9d850d3/sample_config.py#L104-L106
@@ -140,7 +123,6 @@ class Config(object):
     SPOTIFY_BIO_PREFIX = os.environ.get("SPOTIFY_BIO_PREFIX", None)
     SPOTIFY_PASS = os.environ.get("SPOTIFY_PASS", None)
     SPOTIFY_USERNAME = os.environ.get("SPOTIFY_USERNAME", None)
-    LYDIA_API = os.environ.get("LYDIA_API", None)
     DEFAULT_NAME = os.environ.get("DEFAULT_NAME", None)
     # define "spam" in PMs
     MAX_FLOOD_IN_P_M_s = int(os.environ.get("MAX_FLOOD_IN_P_M_s", 5))
